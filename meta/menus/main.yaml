@@ -73,13 +73,15 @@ items:
         viewBag:
             isHidden: '0'
             cssClass: ''
-            isExternal: '0'
+            isExternal: '1'
     -
         title: 'Über Uns'
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: about-us
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
