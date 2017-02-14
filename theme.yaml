@@ -3,3 +3,6 @@ description: ''
 author: ''
 homepage: ''
 code: ''
+form: config/fields.yaml
+require:
+  - RainLab.Pages

@@ -1,0 +1,87 @@
+name: Main
+items:
+    -
+        title: Movies
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: movies
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Events
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: events
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Schulen
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: schools
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Shop
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: shop
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Unterstütze Uns'
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: contribution
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Magazin
+        type: url
+        url: 'https://blog.filmefuerdieerde.org'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Über Uns'
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: about-us
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
