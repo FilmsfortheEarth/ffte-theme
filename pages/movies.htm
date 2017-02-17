@@ -23,13 +23,9 @@ function onSearch() {
     ];
 }
 ==
-<div class="row">
-    <form class="form-inline">
-        <input data-request="onSearch" data-track-input="250" type="search" class="form-control" name="search" placeholder="Search">
-    </form>
-</div>
-<div class="row">
-    <div class="movie-list">
-        {% partial 'movie-list' %}
-    </div>
+<form class="form-inline">
+    <input data-request="onSearch" data-track-input="250" type="text" class="form-control" name="search" placeholder="Search" style="width: 100%">
+</form>
+<div class="row movie-list">
+    {% partial 'movie-list' %}
 </div>

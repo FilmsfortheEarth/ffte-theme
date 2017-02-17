@@ -9,10 +9,14 @@
     {% styles %}
 </head>
 <body>
-    {% partial 'navbar' %}
-    
-    {% partial 'content' %}
-
-    {% partial 'scripts' %}
+    <header>
+        {% partial 'navbar' %}
+    </header>
+    <main>
+        {% partial 'content' %}
+    </main>
+    <footer>
+        {% partial 'scripts' %}
+    </footer>
 </body>
 </html>
