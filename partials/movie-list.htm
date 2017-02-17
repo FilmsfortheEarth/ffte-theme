@@ -1,0 +1,11 @@
+{% for movie in movies %}
+<div class="col-12 media my-4">
+    <a href="{{ 'movie'|page({slug: movie.slug}) }}">
+        <img class="d-flex mr-3" src="{{ movie.cover.thumb(64, auto) }}" alt="Generic placeholder image">
+    </a>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">{{ movie.title }}</h5>
+        {{ movie.seo_description }}
+    </div>
+</div>
+{% endfor %}

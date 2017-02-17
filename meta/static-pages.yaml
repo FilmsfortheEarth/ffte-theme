@@ -1,10 +1,7 @@
 static-pages:
-    index: { }
-    movies: {  }
+    index: {  }
     events: {  }
     schools: {  }
     shop: {  }
     contribution: {  }
-    blog: {  }
     about-us: {  }
-

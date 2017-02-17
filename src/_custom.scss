@@ -181,8 +181,10 @@ $sizes: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:       $white !default;
-$body-color:    $gray-dark !default;
+//$body-bg:       $white !default;
+$body-bg:       $gray-dark !default;
+//$body-color:    $gray-dark !default;
+$body-color:    $white !default;
 $inverse-bg:    $gray-dark !default;
 $inverse-color: $gray-lighter !default;
 

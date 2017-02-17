@@ -2,13 +2,9 @@ name: Main
 items:
     -
         title: Movies
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
+        type: cms-page
+        code: movies
         reference: movies
-        cmsPage: ''
-        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -67,9 +63,13 @@ items:
             isExternal: '0'
     -
         title: Magazin
+        nesting: ''
         type: url
         url: 'https://blog.filmefuerdieerde.org'
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
