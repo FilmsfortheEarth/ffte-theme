@@ -1,7 +1,6 @@
 en:
   nav.brand: FFTE
+  nav.movies: Movies
 de: 
   nav.brand: FFDE
-fr:
-  nav.brand: Kein Plan
-  
+  nav.movies: Filme

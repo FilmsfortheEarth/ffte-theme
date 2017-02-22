@@ -1,7 +1,7 @@
 name: Main
 items:
     -
-        title: Movies
+        title: nav.movies
         type: cms-page
         code: movies
         reference: movies
@@ -10,13 +10,11 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: Events
+        title: nav.events
         nesting: '0'
         type: static-page
-        url: ''
         code: ''
         reference: events
-        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'

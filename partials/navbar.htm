@@ -3,7 +3,6 @@
 [staticMenu mainMenu]
 code = "main"
 
-[staticBreadcrumbs]
 ==
 <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,25 +13,23 @@ code = "main"
         <ul class="navbar-nav mr-auto">
             {% for item in mainMenu.menuItems %}
                 <li class="nav-item{{ item.isActive ? ' active' : ''}}">
-                    <a class="nav-link" href="{{ item.url }}" target="{{ item.viewBag.isExternal ? '_blank' : '' }}">{{ item.title }}</a>
+                    <a class="nav-link" href="{{ item.url }}" target="{{ item.viewBag.isExternal ? '_blank' : '' }}">{{ item.title|_ }}</a>
                 </li>
-
             {% endfor %}
+        </ul>
+        <ul class="navbar-nav navbar-right">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">{{ locales[activeLocale]|_ }}</a>
+                <div class="dropdown-menu bg-inverse">
+                    {% for code, name in locales %}
+                        <a class="dropdown-item {{ activeLocale == code ? 'active' }}"
+                           data-request="onSwitchLocale"
+                           data-request-data="locale: '{{ code }}'">
+                            {{ name|_ }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </li>
         </ul>
     </div>
 </nav>
-<!--
-<div class="container">
-{% if staticBreadcrumbs.breadcrumbs %}
-    <nav class="breadcrumb">
-        {% for breadcrumb in staticBreadcrumbs.breadcrumbs %}
-            {% if breadcrumb.isActive %}
-                <span class="breadcrumb-item active">{{ breadcrumb.title }}</span>
-            {% else %}
-                <a class="breadcrumb-item" href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
-            {% endif %}
-        {% endfor %}
-    </nav>
-{% endif %}
-</div>
--->

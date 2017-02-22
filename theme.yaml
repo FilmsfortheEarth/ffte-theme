@@ -6,4 +6,5 @@ code: ''
 form: config/fields.yaml
 require:
   - RainLab.Pages
+  - Ffte.Movies
 translate: config/lang.yaml

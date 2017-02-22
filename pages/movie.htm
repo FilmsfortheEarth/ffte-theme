@@ -1,54 +1,22 @@
 title = "movie"
-url = "/movies/:slug"
+url = "/movies/:slug/:medium?"
 layout = "default"
 is_hidden = 0
 
 [viewBag]
-localeUrl[de] = "/filme/:slug"
-localeUrl[fr] = "/movies/:slug"
+localeUrl[de] = "/filme/:slug/:medium?"
+localeUrl[fr] = "/movies/:slug/:medium?"
+
+[movieDetail]
+slug = "{{ :slug }}"
+medium = "{{ :medium }}"
 ==
+<?php
 use \ffte\movies\models\Movie;
 
 function onInit() {
     $this['activeMenuItem'] = 'movies';
 }
-
-function onStart() {
-    $slug = $this->param('slug');
-    $this['movie'] = Movie::where('slug', '=', $slug)->first();
-}
+?>
 ==
-<div class="row">
-    <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{movie.media[0].url}}?rel=0" allowfullscreen></iframe>
-    </div>
-</div>
-<div class="row">
-    {% for medium in movie.media %}
-        <figure class="figure">
-            <a href="//www.youtube.com/embed/{{ medium.url }}?rel=0" class="media-action">
-                <img src="http://placehold.it/64x64" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
-            </a>
-            <figcaption class="figure-caption">{{medium.title}}</figcaption>
-        </figure>
-    {% endfor %}
-</div>
-
-{% put scripts %}
-<script>
-    $('.media-action').click(function(e) {
-        e.preventDefault();
-        var url = $(this).attr('href');
-        var iframe = $('.embed-responsive-item');
-
-        // change src without adding it to browser history
-        if(iframe.attr('src') != url) {
-            var container = iframe.parent();
-            iframe.remove();
-            iframe.attr('src', url);
-            container.append(iframe);
-        }
-
-    });
-</script>
-{% endput %}
+{% component 'movieDetail' %}
