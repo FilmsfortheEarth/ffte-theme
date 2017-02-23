@@ -11,3 +11,7 @@ localeUrl[fr] = "/movies"
 movieDetail = "movie"
 ==
 {% component 'movieSearch' %}
+
+{% for movie in list.movies %}
+    {{ movie.title }}
+{% endfor %}

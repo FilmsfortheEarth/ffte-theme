@@ -1,5 +1,5 @@
 title = "tag"
-url = "/tag/:slug"
+url = "/filme/tag/:slug"
 layout = "default"
 is_hidden = 0
 
@@ -21,7 +21,7 @@ notFoundMessage = "Record not found"
     {% for movie in tag.movies %}
     <div class="col-12 col-lg-6 media my-4">
         <a href="{{ 'movie'|page({slug: movie.slug}) }}">
-            <img class="d-flex mr-3" src="{{ movie.cover.thumb(128, auto) }}" alt="Generic placeholder image">
+            <img class="img-fluid d-flex mr-3" src="{{ movie.cover.thumb(128, auto) }}" alt="Generic placeholder image">
         </a>
         <div class="media-body">
             <h5 class="mt-0 mb-1">{{ movie.title }}</h5>
