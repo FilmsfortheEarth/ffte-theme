@@ -19,7 +19,25 @@ function onInit() {
 }
 ?>
 ==
-{% component 'movieDetail' %}
+<div class="background"></div>
+<div class="row">
+    <h1>{{movieDetail.movie.title}}</h1>
+</div>
+<div class="row">
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{{ video_src(movieDetail.medium) }}" allowfullscreen></iframe>
+    </div>
+</div>
+<div class="row">
+    {% for medium in movieDetail.movie.media %}
+    <figure class="figure mt-1 mr-1">
+        <a href="{{ 'movie'|page({slug: movie.slug, medium: medium.id}) }}" class="media-action">
+            <img width="120px" src="{{ image_src(medium) }}" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+        </a>
+        <figcaption class="figure-caption ml-1">{{medium.title}}</figcaption>
+    </figure>
+    {% endfor %}
+</div>
 
 {% put styles %}
 <style>
@@ -41,13 +59,6 @@ function onInit() {
         -ms-filter: blur(10px);
         filter: blur(10px);
     }
-    .background {
-
-    }
 </style>
 {% endput %}
 
-<script>
-    //var bg = "{{movieDetail.movie.backgrounds[0].path}}";
-    //document.body.style = "background-image: url(" + bg + "); background-repeat: no-repeat; background-size: cover;";
-</script>
