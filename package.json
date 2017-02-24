@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
     "laravel-mix": "^0.7.5"
   },
   "scripts": {
