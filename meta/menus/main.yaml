@@ -2,9 +2,11 @@ name: Main
 items:
     -
         title: nav.movies
-        type: cms-page
+        nesting: '0'
+        type: static-page
         code: movies
-        reference: movies
+        reference: filme
+        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -13,8 +15,10 @@ items:
         title: nav.events
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: events
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
