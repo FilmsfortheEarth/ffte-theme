@@ -1,0 +1,23 @@
+@import 'theme';
+@import 'vendor/bootstrap';
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  width: 150px;
+  background: url('../images/logo.png') no-repeat 7px -5px;
+  background-size: contain;
+}
+
+.subnav {
+  background-color: $navbar-default-link-active-bg;
+
+  .nav-pills > li.active > a, .nav-pills > li.active > a:hover {
+    background-color: $navbar-default-bg;
+    color: #555;
+    border-radius: 0;
+  }
+
+}

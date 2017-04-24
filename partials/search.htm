@@ -1,0 +1,9 @@
+description = "search"
+
+[viewBag]
+snippetCode = "search"
+snippetName = "Suche"
+==
+<form action="{{ 'filme-suche'|staticPage }}">
+    <input class="form-control" type="text" name="query" placeholder="Titel, Theme oder Schlagwort">
+</form>

@@ -3,23 +3,27 @@
 [localePicker]
 forceUrl = 1
 ==
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ this.page.title }}</title>
-    {% partial 'styles' %}
-    {% styles %}
+    {% partial 'site/meta' %}
 </head>
 <body>
-    <header>
-        {% partial 'navbar' %}
-    </header>
-    <main>
-        {% partial 'content' %}
-    </main>
-    <footer>
-        {% partial 'scripts' %}
-    </footer>
+
+<!-- Header -->
+<header id="layout-header">
+</header>
+
+<!-- Nav -->
+{% partial 'site/nav' %}
+
+<!-- Content -->
+<section class="container">
+    {% page %}
+</section>
+
+<!-- Scripts -->
+{% partial 'site/scripts' %}
+
 </body>
 </html>

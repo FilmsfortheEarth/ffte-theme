@@ -1,8 +1,8 @@
 static-pages:
     index: {  }
-    filme: {  }
+    filme-uebersicht: {  }
+    themen:
+        filme-themen-energie: {  }
+    tags: {  }
     events: {  }
-    schools: {  }
-    shop: {  }
-    contribution: {  }
-    about-us: {  }
+    filme-suche: {  }

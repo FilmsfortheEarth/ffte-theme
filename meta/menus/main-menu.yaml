@@ -1,0 +1,79 @@
+name: mainMenu
+items:
+    -
+        title: Filme
+        nesting: ''
+        type: header
+        url: ''
+        code: films
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Übersicht
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: overview
+                reference: filme-uebersicht
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Themen
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: issues
+                reference: themen
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Tags
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: tags
+                reference: tags
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Suche
+                nesting: '0'
+                type: static-page
+                code: search
+                reference: filme-suche
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Events
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: events
+        reference: events
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

@@ -1,4 +1,0 @@
-fields:
-  color:
-    label: Primary Color
-    type: colorpicker
